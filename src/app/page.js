@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import About from "@/Components/About";
-import logo_1 from "../../public/Assets/Logos/Additional Logos/SVG/05copyinverted.svg"
 
 export default function Home() {
   const router = useRouter();
