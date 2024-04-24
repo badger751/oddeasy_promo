@@ -55,33 +55,8 @@ const Navbar = () => {
             <p>STUDIO</p>
           </div>
           <div>
-            <ul className="text-lg flex items-center space-x-[1rem]">
-              {/* Render dropdown on mobile */} 
-              <li className="md:hidden px-[0.8rem] cursor-pointer">
-                <button
-                  onClick={() => setShowDropdown(!showDropdown)}
-                  className="border-white bg-rose-400 rounded-full p-[0.5rem] text-white"
-                >
-                  Menu
-                </button>
-              </li>
-              {/* Render individual items on larger screens */}
-              {!showDropdown && (
-                <React.Fragment>
-                  <li className="hidden md:block px-[0.8rem] cursor-pointer">Work</li>
-                  <li className="hidden md:block px-[0.8rem] cursor-pointer">About</li>
-                  <li className="hidden md:block px-[0.8rem] cursor-pointer">Contact</li>
-                </React.Fragment>
-              )}
-            </ul>
-            {/* Render dropdown on mobile screens */}
-            {showDropdown && (
-              <ul className="md:hidden text-lg bg-black absolute top-full left-0 right-0 mt-1 rounded-md shadow-lg py-1 transition-opacity duration-300 opacity-100">
-                <li className="block px-[0.8rem] cursor-pointer">Work</li>
-                <li className="block px-[0.8rem] cursor-pointer">About</li>
-                <li className="block px-[0.8rem] cursor-pointer">Contact</li>
-              </ul>
-            )}
+          <button className=" bg-off  size-28 rounded-full flex-1 mx-2 py-2 text-black text-xl">Book a call</button>
+            
           </div>
         </div>
       </div>
