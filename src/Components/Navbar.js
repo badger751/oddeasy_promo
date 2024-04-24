@@ -41,12 +41,12 @@ const Navbar = () => {
 
   return (
     <React.Fragment>
-      <div className="non-italic bg-black fixed w-full flex justify-center items-center z-20">
+      <div className="non-italic  fixed w-full flex justify-center items-center z-20">
         <div
-          className={`flex bg-black translate-y-2 p-2 z-1000 justify-between transition-all ${
+          className={`flex  translate-y-2 p-2 z-1000 justify-between transition-all ${
             isScrolled
-              ? "border-2 border-white rounded-full md:w-[90%] w-full"
-              : "border-2 border-black md:w-[100%] w-full"
+              ? " rounded-full md:w-[90%] w-full"
+              : " md:w-[100%] w-full"
           } text-white p-[0.5rem] items-center`}
         >
           <div className="flex items-center">
