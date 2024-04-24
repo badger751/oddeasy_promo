@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
         <div id="stars" className="w-full h-full"></div>
       </div>
         <Navbar/>
-        <Footer/>
-        <div className="relative z-1000"  >{children}</div>
         
+        <div className="relative z-1000"  >{children}</div>
+        <Footer/>
       </body>
     </html>
   );
