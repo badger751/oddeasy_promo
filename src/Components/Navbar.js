@@ -39,23 +39,31 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, [logos]);
 
+  // Function to handle the visibility of the navbar based on scroll position
+  const handleNavbarVisibility = () => {
+    if (!isScrolled) {
+      return "opacity-0"; // If not scrolled, make navbar transparent
+    } else {
+      return "opacity-100"; // If scrolled, make navbar visible
+    }
+  };
+
   return (
     <React.Fragment>
-      <div className="non-italic  fixed w-full flex justify-center items-center z-20">
+      <div className={`non-italic fixed w-full flex justify-center items-center z-20 transition-opacity ${handleNavbarVisibility()}`}>
         <div
-          className={`flex  translate-y-2 p-2 z-1000 justify-between transition-all ${
+          className={`flex translate-y-2 p-2 z-1000 justify-between ${
             isScrolled
-              ? " rounded-full md:w-[90%] w-full"
-              : " md:w-[100%] w-full"
+              ? "rounded-full md:w-[100%] w-full"
+              : "md:w-[100%] w-full"
           } text-white p-[0.5rem] items-center`}
         >
           <div className="flex items-center">
             {/* Image component displaying current logo */}
-            <Image src={currentLogo} alt="Company Logo" height={60} width={80} />
+            <Image src={currentLogo} alt="Company Logo" height={120} width={120} />
             <p>STUDIO</p>
           </div>
           <div>
-          <button className=" bg-off  size-28 rounded-full flex-1 mx-2 py-2 text-black text-xl">Book a call</button>
             
           </div>
         </div>

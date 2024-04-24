@@ -25,16 +25,14 @@ const Footer = () => {
         <div className="text-center md:text-left flex-1 min-w-[140px] text-sm md:text-base">
           LOCAL/ 46° 28' 58.6272"N
         </div>
-        <div className="shrink-0">
+        {/* Conditionally render the Image component based on screen size */}
+        <div className="shrink-0 hidden md:block">
           <Image src={Asset26} height={30} width={60} alt="logo"/>
         </div>
         <div className="text-center md:text-right flex-1 min-w-[140px] text-sm md:text-base">
           Studio/ 90° N 28’ 90 S
         </div>
       </div>
-        
-
-
     </Fragment>
   );
 };

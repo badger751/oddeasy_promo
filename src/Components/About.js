@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="text-white flex flex-col h-screen w-screen justify-center items-center bg-transparent px-4 sm:px-6 lg:px-8 about">
       
-      <p className="text-lg sm:text-xl md:text-2xl custom-font text-off">
+      <p className="text-lg sm:text-xl md:text-2xl custom-font w-full text-off">
         Epic brands aren’t just born. We redesign them.
       </p>
       <br />
