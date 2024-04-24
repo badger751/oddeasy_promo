@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="text-lg flex items-center space-x-[1rem]">
-              {/* Render dropdown on mobile */}
+              {/* Render dropdown on mobile */} 
               <li className="md:hidden px-[0.8rem] cursor-pointer">
                 <button
                   onClick={() => setShowDropdown(!showDropdown)}
