@@ -33,7 +33,6 @@ export default function Home() {
       </div>
       <div ref={aboutRef}> {/* Step 2: Attach the ref */}
         <About />
-        <Footer/>
       </div>
       <footer className="footer footer-center p-10 text-primary-content mt-[243px] ">
         <aside>
