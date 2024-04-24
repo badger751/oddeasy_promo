@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       </div>
         <Navbar/>
         <div className="relative z-1000"  >{children}</div>
-        <Footer/>
+        
       </body>
     </html>
   );
