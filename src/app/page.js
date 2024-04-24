@@ -30,7 +30,7 @@ export default function Home() {
       <footer className="footer footer-center p-10 text-primary-content mt-[243px] ">
         <aside>
           <p className="font-bold text-white">
-            oddeasy Studios Ltd. <br/>Providing reliable design since 
+            oddeasy Studios 
           </p> 
           <p className="text-white">Copyright © 2024 - All right reserved</p>
         </aside> 
