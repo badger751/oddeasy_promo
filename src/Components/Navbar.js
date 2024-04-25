@@ -1,19 +1,11 @@
 'use client'
-
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo_0 from "../../public/Assets/Logos/01 Main - Wordmark Inverted.png";
-import Logo_1 from "../../public/Assets/Logos/01 Main - Wordmark Inverted.png";
-import Logo_2 from "../../public/Assets/Logos/01 Main - Wordmark Inverted.png";
-import Logo_3 from "../../public/Assets/Logos/01 Main - Wordmark Inverted.png";
-import Logo_4 from "../../public/Assets/Logos/01 Main - Wordmark Inverted.png";
-import Logo_5 from "../../public/Assets/Logos/01 Main - Wordmark Inverted.png";
+import logo_6 from "../../public/Assets/STUDIOWOB.svg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentLogo, setCurrentLogo] = useState(Logo_0); // Initial logo
-  const [showDropdown, setShowDropdown] = useState(false); // State to control dropdown visibility
-  const logos = [Logo_0, Logo_1, Logo_2, Logo_3, Logo_4, Logo_5]; // Array of logos
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,47 +21,47 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentLogo((currentLogo) => {
-        const index = (logos.indexOf(currentLogo) + 1) % logos.length;
-        return logos[index];
-      });
-    }, 3000); // Change logo every 3 seconds
+    const handleNavbarVisibility = () => {
+      if (!isScrolled) {
+        setIsVisible(true); // Navbar is visible when at the top
+      } else {
+        setIsVisible(false); // Navbar is invisible when scrolled down
+      }
+    };
 
-    return () => clearInterval(interval);
-  }, [logos]);
+    handleNavbarVisibility();
 
-  // Function to handle the visibility of the navbar based on scroll position
-  const handleNavbarVisibility = () => {
-    if (!isScrolled) {
-      return "opacity-0"; // If not scrolled, make navbar transparent
-    } else {
-      return "opacity-100"; // If scrolled, make navbar visible
-    }
+    return () => setIsVisible(false); // Clean-up function to ensure visibility is reset when unmounting
+  }, [isScrolled]);
+
+  const navbarStyle = {
+    opacity: isVisible ? 1 : 0,
+    transition: "opacity 0.5s ease-in-out",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent background
   };
 
+  // Define the logo dimensions based on screen size
+  const logoHeight = isMobileDevice() ? 100 : 100; // Adjust height for mobile screens
+  const logoWidth = isMobileDevice() ? 200 : 200; // Adjust width for mobile screens
+
   return (
-    <React.Fragment>
-      <div className={`non-italic fixed w-full flex justify-center items-center z-20 transition-opacity ${handleNavbarVisibility()}`}>
-        <div
-          className={`flex translate-y-2 p-2 z-1000 justify-between ${
-            isScrolled
-              ? "rounded-full md:w-[100%] w-full"
-              : "md:w-[100%] w-full"
-          } text-white p-[0.5rem] items-center`}
-        >
-          <div className="flex items-center">
-            {/* Image component displaying current logo */}
-            <Image src={currentLogo} alt="Company Logo" height={120} width={120} />
-            <p>STUDIO</p>
-          </div>
-          <div>
-            
-          </div>
+    <div className="fixed top-0 w-full z-20" style={navbarStyle}>
+      <div className={`flex justify-between items-center p-4 md:p-8 ${isScrolled ? "bg-transparent" : ""}`}>
+        <div className="flex items-center">
+          {/* Image component displaying current logo */}
+          <Image src={logo_6} alt="Company Logo" height={logoHeight} width={logoWidth} />
+        </div>
+        <div className="flex items-center">
+          {/* Add any other navbar elements here */}
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
 export default Navbar;
+
+// Function to detect mobile device
+const isMobileDevice = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
