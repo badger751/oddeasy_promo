@@ -42,8 +42,8 @@ const Navbar = () => {
 
   // Define the logo dimensions based on the environment
   const isClientSide = typeof window !== 'undefined';
-  const logoHeight = isClientSide && window.innerWidth <= 768 ? 40 : 60; // Adjust height for small screens
-  const logoWidth = isClientSide && window.innerWidth <= 768 ? 120 : 180; // Adjust width for small screens
+  const logoHeight = isClientSide && window.innerWidth <= 768 ? 100 : 100; // Adjust height for small screens
+  const logoWidth = isClientSide && window.innerWidth <= 768 ? 200 : 200; // Adjust width for small screens
 
   return (
     <div className="fixed top-0 w-full z-20" style={navbarStyle}>
