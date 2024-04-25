@@ -21,7 +21,7 @@
   font-weight: 300;
   font-style: italic;}
 .custom-font_2{
- font-family: "urbanist_semi" ;
+ font-family: "Urbanist" ;
  font-weight: 600;
  font-style: normal;
 }
@@ -41,7 +41,7 @@
 font-weight: 400;
 src: url("../../public/Assets/Fonts/gelica/Fontspring-DEMO-gelica-italic.otf")format('opentype') ;
 
-font-family: "urbanist_semi";
+font-family: "Urbanist";
 font-weight: 600 ;
 src: url("../../public/Assets/Fonts/Urbanist/Urbanist-SemiBold.ttf")format('truetype');
 

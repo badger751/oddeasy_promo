@@ -27,8 +27,8 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center min-h-[91vh] pt-8 sm:pt-24 w-full"> {/* Decreased top padding for mobile */}
         <div className="text-white flex flex-col items-center bg-transparent w-full px-4 custom-font">
-          <p className="text-center text-2xl sm:text-7xl lg:text-7xl text-off my-2 lg:my-2 sm:my-1">Making Galactic Moves</p>
-          <p className="text-center text-2xl sm:text-7xl lg:text-7xl text-off my-2 lg:my-2 sm:my-1">for your Brand? Begin Here</p>
+          <p className="text-center text-2xl sm:text-7xl lg:text-7xl text-off my-1 lg:my-2 sm:my-0">Making Galactic Moves</p> {/* Decreased margin on mobile */}
+          <p className="text-center text-2xl sm:text-7xl lg:text-7xl text-off my-1 lg:my-2 sm:my-0">for your Brand? Begin Here</p> {/* Decreased margin on mobile */}
         </div>
         <div className="flex justify-evenly w-full max-w-xs sm:max-w-md lg:max-w-lg my-2 sm:my-4 py-2 px-4"> {/* Decreased margin for mobile */}
           <button onClick={scrollToAbout} className="bg-rose-400 rounded-full flex-1 mx-2 py-1 px-2 text-off text-sm sm:text-lg lg:text-base hover:bg-rose-500 transform hover:scale-105 transition duration-300 ease-in-out">Know more</button> {/* Adjusted button size for desktop */}
