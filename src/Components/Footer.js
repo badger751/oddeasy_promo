@@ -2,7 +2,6 @@
 import { Fragment, useState, useEffect } from "react";
 import Image from "next/image";
 import Asset26 from "../../public/Assets/Elements/SVG/Asset26.svg";
-
 const Footer = () => {
   const [isFooterVisible, setIsFooterVisible] = useState(true);
 
@@ -27,14 +26,16 @@ const Footer = () => {
     <Fragment>
       {/* Conditionally render the footer based on visibility */}
       <div className="fixed bottom-0 z-10 p-3 w-full text-white flex flex-wrap justify-around items-center" style={footerStyle}>
-        <div className="text-center md:text-left flex-1 min-w-[80px] md:min-w-[100px] text-xs md:text-sm">
+        <div className="text-center text-off md:text-left flex-1 min-w-[80px] md:min-w-[100px] text-xs md:text-sm">
           LOCAL/ 46° 28' 58.6272"N
         </div>
         <div className="shrink-0 hidden md:block">
           <Image src={Asset26} height={30} width={30} alt="logo"/>
         </div>
-        <div className="text-center md:text-right flex-1 min-w-[80px] md:min-w-[100px] text-xs md:text-sm">
-          Studio/ 90° N 28’ 90 S
+        <div className="text-center text-off md:text-right flex-1 min-w-[80px] md:min-w-[100px] text-xs md:text-sm">
+          Studio/ 20.5937° N,78.9629° E 
+
+
         </div>
       </div>
     </Fragment>

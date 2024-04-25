@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo_6 from "../../public/Assets/STUDIOWOB.svg";
+import logo_6 from "../../public/Assets/STUDIOWOB.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

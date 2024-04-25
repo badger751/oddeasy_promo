@@ -7,10 +7,10 @@ const About = () => {
       <br />
       <div className="items-center">
         <p className="text-center sm:text-base md:text-2xl text-off">
-          We are oddeasy, a full-spectrum brand design studio 
+          We are oddeasy, a full-spectrum brand design
         </p>
         <p className="text-center sm:text-base md:text-2xl text-off">
-          for explorers, changemakers and visionaries.
+         studio  for explorers, changemakers and visionaries.
         </p>
       </div>
       <br/>
@@ -25,10 +25,10 @@ const About = () => {
       </p>
       <br />
       <p className="text-center sm:text-base md:text-2xl text-off">
-        Want to transform your brilliantly innovative idea into an
+        Want to transform your brilliantly innovative idea 
       </p>
       <p className="text-center sm:text-base md:text-2xl text-off">
-        exceptional brand universe?
+       into an exceptional brand universe?
       </p>
       <br />
       <p className="text-lg sm:text-base md:text-2xl text-off">
